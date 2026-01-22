@@ -32,14 +32,14 @@ pipeline {
                     echo ' 2. Criando pasta de build...'
                     sh 'rm -rf dist && mkdir dist'
 
-                    echo ' 3 Copiando arquivos estáticos...'
-                    sh 'cp index.min.html dist/'
+
+                    echo ' 3. Construindo os assets...'
+                    sh 'npm run build'
+
+                    echo ' 4. Copiando arquivos estáticos...'
+                    sh 'cp index.min.html dist/index.html'
                     sh 'cp -r css dist/css/'
                     sh 'cp -r img dist/img/'
-
-
-                    echo ' 4. Construindo os assets...'
-                    sh 'npm run build'
 
                     echo ' BUILD SNAPSHOT: '
                     sh 'ls -R dist/'
