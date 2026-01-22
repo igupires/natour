@@ -1,0 +1,44 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin center-fix {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+//MEDIA QUERIES MANAGER
+/** Mixin to create media queries for different breakpoints.
+ * 
+ * 0->600px: phone
+ * 600px->900px: tablet
+ * 900px->1200px: desktop
+ * 1200px->1800px: large-desktop
+ * 1800px->2400px: xlarge-desktop
+ * 
+ * @param {string} $breakpoint - The breakpoint to use for the media query.
+ * @param {string} $content - The content to include in the media query.
+ * @return {void}
+ */
+// @mixin respond($breakpoint, $content) {
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content; } //600px
+    } @else if $breakpoint == tablet {
+        @media only screen and (max-width: 56.25em) { @content; } //900px
+    } @else if $breakpoint == desktop {
+        @media only screen and (max-width: 75em) { @content; } //1200px
+    } @else if $breakpoint == large-desktop {
+        @media only screen and (max-width: 93.75em) { @content; } //1500px
+    } @else if $breakpoint == xlarge-desktop {
+        @media only screen and (max-width: 112.5em) { @content; } //1800px
+    } else {
+        @warn "No matching media query for #{$breakpoint}.";
+    }
+}

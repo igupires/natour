@@ -1,0 +1,252 @@
+.u-center-text {
+    text-align: center !important;
+}
+
+
+.u-margin-bottom-medium {
+    margin-bottom: $margin-medium !important;
+
+    @include respond(tablet) {
+        margin-bottom: $margin-medium/2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-top: $margin-medium !important;
+
+        @include respond(tablet) {
+            margin-top: $margin-medium/2 !important;
+        }
+    }
+}
+
+.u-margin-bottom-small {
+    margin-bottom: $margin-small !important;
+
+    @include respond(tablet) {
+        margin-bottom: $margin-small/2 !important;
+    }
+    &:not(:first-child) {
+        margin-top: $margin-small !important;
+
+        @include respond(tablet) {
+            margin-top: $margin-small/2 !important;
+        }
+    }
+}
+
+.u-margin-bottom-big {
+    margin-bottom: $margin-big !important;
+
+    @include respond(tablet) {
+        margin-bottom: $margin-big/2 !important;
+    }
+    &:not(:first-child) {
+        margin-top: $margin-big !important;
+        
+        @include respond(tablet) {
+            margin-top: $margin-big/2 !important;
+        }
+    }
+}
+
+.u-margin-bottom-huge {
+    margin-bottom: $margin-huge !important;
+
+    @include respond(tablet) {
+        margin-bottom: $margin-big/2 !important;
+    }
+    &:not(:first-child) {
+        margin-top: $margin-huge !important;
+        
+        @include respond(tablet) {
+            margin-top: $margin-huge/2 !important;
+        }
+    }
+}
+
+.u-margin-top-medium {
+    margin-top: $margin-medium !important;
+
+    @include respond(tablet) {
+        margin-top: $margin-medium/2 !important;
+    }
+    &:not(:first-child) {
+        margin-bottom: $margin-medium !important;
+
+        @include respond(tablet) {
+            margin-bottom: $margin-medium/2 !important;
+        }
+    }
+}
+
+.u-margin-top-small {
+    margin-top: $margin-small !important;
+
+    @include respond(tablet) {
+        margin-top: $margin-small/2 !important;
+    }
+    &:not(:first-child) {
+        margin-bottom: $margin-small !important;
+
+        @include respond(tablet) {
+            margin-bottom: $margin-small/2 !important;
+        }
+    }
+}
+
+.u-margin-top-big {
+    margin-top: $margin-big !important;
+
+    @include respond(tablet) {
+        margin-top: $margin-big/2 !important;
+    }
+    &:not(:first-child) {
+        margin-bottom: $margin-big !important;
+
+        @include respond(tablet) {
+            margin-bottom: $margin-big/2 !important;
+        }
+    }
+}
+
+.u-margin-top-huge {
+    margin-bottom: $margin-huge !important;
+
+    @include respond(tablet) {
+        margin-top: $margin-huge/2 !important;
+    }
+    &:not(:first-child) {
+        margin-bottom: $margin-huge !important;
+
+        @include respond(tablet) {
+            margin-bottom: $margin-huge/2 !important;
+        }
+    }
+}
+.u-margin-left-medium {
+    margin-left: $margin-medium !important;
+
+    @include respond(tablet) {
+        margin-left: $margin-medium / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-right: $margin-medium !important;
+
+        @include respond(tablet) {
+            margin-right: $margin-medium / 2 !important;
+        }
+    }
+}
+
+.u-margin-left-small {
+    margin-left: $margin-small !important;
+
+    @include respond(tablet) {
+        margin-left: $margin-small / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-right: $margin-small !important;
+
+        @include respond(tablet) {
+            margin-right: $margin-small / 2 !important;
+        }
+    }
+}
+
+.u-margin-left-big {
+    margin-left: $margin-big !important;
+
+    @include respond(tablet) {
+        margin-left: $margin-big / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-right: $margin-big !important;
+
+        @include respond(tablet) {
+            margin-right: $margin-big / 2 !important;
+        }
+    }
+}
+
+.u-margin-left-huge {
+    margin-left: $margin-huge !important;
+
+    @include respond(tablet) {
+        margin-left: $margin-huge / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-right: $margin-huge !important;
+
+        @include respond(tablet) {
+            margin-right: $margin-huge / 2 !important;
+        }
+    }
+}
+
+.u-margin-right-medium {
+    margin-right: $margin-medium !important;
+
+    @include respond(tablet) {
+        margin-right: $margin-medium / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-left: $margin-medium !important;
+
+        @include respond(tablet) {
+            margin-left: $margin-medium / 2 !important;
+        }
+    }
+}
+
+.u-margin-right-small {
+    margin-right: $margin-small !important;
+
+    @include respond(tablet) {
+        margin-right: $margin-small / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-left: $margin-small !important;
+
+        @include respond(tablet) {
+            margin-left: $margin-small / 2 !important;
+        }
+    }
+}
+
+.u-margin-right-big {
+    margin-right: $margin-big !important;
+
+    @include respond(tablet) {
+        margin-right: $margin-big / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-left: $margin-big !important;
+
+        @include respond(tablet) {
+            margin-left: $margin-big / 2 !important;
+        }
+    }
+}
+
+.u-margin-right-huge {
+    margin-right: $margin-huge !important;
+
+    @include respond(tablet) {
+        margin-right: $margin-huge / 2 !important;
+    }
+
+    &:not(:first-child) {
+        margin-left: $margin-huge !important;
+
+        @include respond(tablet) {
+            margin-left: $margin-huge / 2 !important;
+        }
+    }
+}

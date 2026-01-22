@@ -1,0 +1,34 @@
+{
+  "name": "lafora",
+  "version": "1.0.0",
+  "description": "Ecoturismo no vale do café.",
+  "main":"index.html",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.watch.css -w",
+    "concat:watch:css": "concat -o css/style.css css/style.watch.css css/icon-font.css -w",
+    "devserver": "live-server --port=8080 --open=./index.html",
+    "homserver": "live-server --port=8080 --open=./index.min.html",
+    "start": "npm-run-all --parallel watch:sass concat:watch:css devserver",
+    "start:hom": "npm-run-all build homserver",
+    "build": "npm-run-all compile:sass concat:css prefix:css compress:css minify:html",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css css/icon-font.css",
+    "prefix:css": "postcss -use autoprefixer  -b 'last 10 versions'  css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css -s compressed ",
+    "minify:html": "html-minifier --collapse-whitespace --remove-comments --remove-attribute-quotes --minify-css true --minify-js true index.html -o index.min.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Pires dos Santos",
+  "email": "igor.pires.zweite@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.87.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
