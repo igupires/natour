@@ -23,12 +23,26 @@ pipeline {
     }
 
     stages {
-        stage('Build SASS') {
+        stage('Build & Organize Assets') {
             steps {
                 container('builder') {
-                    // Instala dependências e compila SASS para CSS
-                    sh 'npm install' 
-                    sh 'npm run build' // Deve gerar, ex: ./dist/style.css
+                    echo ' 1. Instalando dependências...'
+                    sh 'npm install'
+
+                    echo ' 2. Criando pasta de build...'
+                    sh 'rm -rf dist && mkdir dist'
+
+                    echo ' 3 Copiando arquivos estáticos...'
+                    sh 'cp index.min.html dist/'
+                    sh 'cp -r css dist/css/'
+                    sh 'cp -r img dist/img/'
+
+
+                    echo ' 4. Construindo os assets...'
+                    sh 'npm run build'
+
+                    echo ' BUILD SNAPSHOT: '
+                    sh 'ls -R dist/'
                 }
             }
         }
