@@ -28,7 +28,7 @@ pipeline {
                 container('builder') {
                     // Instala dependências e compila SASS para CSS
                     sh 'npm install' 
-                    sh 'npm run build:sass' // Deve gerar, ex: ./dist/style.css
+                    sh 'npm run build' // Deve gerar, ex: ./dist/style.css
                 }
             }
         }

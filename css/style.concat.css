@@ -526,19 +526,21 @@ body {
 }
 @media only screen and (max-width: 56.25em) {
   .composition__photo--p1 {
-    top: 1rem;
+    top: 1.5rem;
     left: 3rem;
+    transform: rotate(5deg);
     border-radius: 10%;
     overflow: hidden;
   }
 }
 .composition__photo--p2 {
   right: 0;
-  top: 2rem;
+  top: -5rem;
+  width: 50%;
 }
 @media only screen and (max-width: 56.25em) {
   .composition__photo--p2 {
-    top: 2rem;
+    top: 3rem;
     right: -3rem;
     transform: rotate(-5deg);
     border-radius: 10%;
@@ -546,25 +548,27 @@ body {
   }
 }
 .composition__photo--p3 {
-  left: 50%;
-  top: 7rem;
+  right: 18rem;
+  top: 3rem;
+  z-index: 11;
 }
 @media only screen and (max-width: 56.25em) {
   .composition__photo--p3 {
     top: 0;
-    left: 7.5%;
+    left: 17.5%;
+    transform: rotate(-7deg) scale(1.1);
     border-radius: 10%;
     overflow: hidden;
   }
 }
 .composition__photo:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
   outline: 1.5rem solid #55c57a !important;
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
 .composition:hover .composition__photo:not(:hover) {
-  transform: scale(0.9);
+  transform: scale(0.75);
 }
 
 .feature-box {
@@ -618,13 +622,13 @@ body {
   background-color: olivedrab;
   transform: rotateY(180deg);
 }
-.card__side--back-1 {
+.card__side--back--1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
-.card__side--back-2 {
+.card__side--back--2 {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
 }
-.card__side--back-3 {
+.card__side--back--3 {
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 .card:hover .card__side--front {
