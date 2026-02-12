@@ -5,7 +5,6 @@ pipeline {
             apiVersion: v1
             kind: Pod
             spec:
-              serviceAccountName: jenkins # A SA configurada com Workload Identity
               containers:
               - name: builder
                 image: node:18-alpine
